@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@use "./assets/styles/index" as *;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include mq(1600px, max) {
+    font-size: 60%;
+  }
+
+  @include mq(1440px, max) {
+    font-size: 58%;
+  }
+
+  @include mq(1300px, max) {
+    font-size: 56%;
+  }
+
+  @include mq(1024px, max) {
+    font-size: 53%;
+  }
+
+  @include mq(850px, max) {
+    font-size: 50%;
+  }
+
+  @include mq(428px, max) {
+    font-size: 48%;
+  }
+
+  @include mq(320px, max) {
+    font-size: 45%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
