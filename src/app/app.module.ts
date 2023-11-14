@@ -12,6 +12,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AddressComponent } from './pages/address/address.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
     CartComponent,
     AddressComponent,
     ShippingComponent,
+    ProductCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

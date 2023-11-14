@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdressComponent } from './address.component';
+import { AddressComponent } from './address.component';
 
 describe('AdressComponent', () => {
-  let component: AdressComponent;
-  let fixture: ComponentFixture<AdressComponent>;
+  let component: AddressComponent;
+  let fixture: ComponentFixture<AddressComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AdressComponent]
+      declarations: [AddressComponent],
     });
-    fixture = TestBed.createComponent(AdressComponent);
+    fixture = TestBed.createComponent(AddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
