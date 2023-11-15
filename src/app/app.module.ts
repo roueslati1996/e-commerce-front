@@ -13,6 +13,8 @@ import { CartComponent } from './pages/cart/cart.component';
 import { AddressComponent } from './pages/address/address.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
+import { CartProductCardComponent } from './components/cart-product-card/cart-product-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     AddressComponent,
     ShippingComponent,
     ProductCardComponent,
+    OrderSummaryComponent,
+    CartProductCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
