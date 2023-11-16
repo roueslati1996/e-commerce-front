@@ -7,8 +7,7 @@
         type="email"
         id="email"
         name="email"
-        [ngModel]="email"
-        (ngModelChange)="email = $event"
+        [(ngModel)]="email"
         required
       />
     </div>
@@ -18,11 +17,14 @@
         type="password"
         id="password"
         name="password"
-        [ngModel]="password"
-        (ngModelChange)="password = $event"
+        [(ngModel)]="password"
         required
       />
     </div>
     <button type="submit">Login</button>
+    <div class="login-links">
+      <a href="/forgot-password">Forgot Password?</a>
+      <a href="/sign-up">Sign Up</a>
+    </div>
   </form>
 </div>
