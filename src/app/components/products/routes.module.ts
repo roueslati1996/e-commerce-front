@@ -6,12 +6,12 @@ import { ViewProductsComponent } from './view-products/view-products.component';
 
 const routes: Routes = [
   {
-    path: 'products',
+    path: '',
     component: ViewProductsComponent,
     canActivate: [AuthGuard],
   },
   {
-    path: 'products/details',
+    path: 'details',
     component: ViewProductsComponent,
     canActivate: [AuthGuard],
   },
