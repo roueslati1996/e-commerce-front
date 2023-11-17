@@ -7,10 +7,13 @@ import { ProductComponent } from './pages/product/product.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AddressComponent } from './pages/address/address.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to the login page
   { path: 'login', component: LoginComponent }, // Add a route for the login page
+  { path: 'register', component: RegisterComponent }, // Add a route for the login page
+
   // Add other routes for different parts of your application if needed,
   { path: 'shop', component: ShopComponent },
   { path: 'product', component: ProductComponent },
