@@ -11,14 +11,25 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  // { path: 'login', component: LoginComponent },
 
-  { path: 'shop', component: ShopComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'address', component: AddressComponent },
-  { path: 'shipping', component: ShippingComponent },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./components/products/routes.module').then((m) => m.Module),
+  },
+
+  // { path: 'shop', component: ShopComponent },
+  // { path: 'collective', component: ShopComponent },
+  // { path: 'designers', component: ShopComponent },
+  // { path: 'about-us', component: ShopComponent },
+  // { path: 'contact-us', component: ShopComponent },
+
+  // { path: 'product', component: ProductComponent },
+  // { path: 'cart', component: CartComponent },
+  // { path: 'address', component: AddressComponent },
+  // { path: 'shipping', component: ShippingComponent },
 
   { path: '**', component: NotFoundComponent },
 ];
