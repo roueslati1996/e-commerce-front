@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { ShippingComponent } from './pages/shipping/shipping.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 import { CartProductCardComponent } from './components/cart-product-card/cart-product-card.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,8 +32,9 @@ import { CartProductCardComponent } from './components/cart-product-card/cart-pr
     ProductCardComponent,
     OrderSummaryComponent,
     CartProductCardComponent,
+    NotFoundComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

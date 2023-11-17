@@ -9,18 +9,32 @@ import { AddressComponent } from './pages/address/address.component';
 import { ShippingComponent } from './pages/shipping/shipping.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to the login page
-  { path: 'login', component: LoginComponent }, // Add a route for the login page
-  { path: 'register', component: RegisterComponent }, // Add a route for the login page
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
-  // Add other routes for different parts of your application if needed,
+const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./components/products/routes.module').then((m) => m.Module),
+  },
+
   { path: 'shop', component: ShopComponent },
+  { path: 'collective', component: ShopComponent },
+  { path: 'designers', component: ShopComponent },
+  { path: 'about-us', component: ShopComponent },
+  { path: 'contact-us', component: ShopComponent },
+
   { path: 'product', component: ProductComponent },
   { path: 'cart', component: CartComponent },
   { path: 'address', component: AddressComponent },
   { path: 'shipping', component: ShippingComponent },
+
+  { path: '**', component: NotFoundComponent },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
