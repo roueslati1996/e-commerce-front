@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+$primary-color: #0056b3;
+$hover-color: darken($primary-color, 15%);
+$light-gray: #f7f7f7;
+$text-color: #333;
+$border-color: #ddd;
+$link-color: $primary-color;
+$link-hover-color: darken($link-color, 10%);
+$font-family: "Open+Sans", sans-serif;
+
+.login-container {
+    font-family: $font-family;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $light-gray;
+
+    form {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+
+        h2 {
+            color: $text-color;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+                font-size: 15px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"] {
+                width: 100%;
+                padding: 15px;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-color;
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 35px;
+                left: 10px;
+                color: $text-color;
+            }
+        }
+
+        button {
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+
+        .login-links {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: 20px;
+
+            a {
+                color: $link-color;
+                text-decoration: none;
+                transition: color 0.3s;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $link-hover-color;
+                }
+            }
+        }
+    }
+}
