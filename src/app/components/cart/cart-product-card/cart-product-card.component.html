@@ -9,12 +9,12 @@
 
       <div class="quantity">
         <div class="container">
-          <span>-</span>
-          <span class="number">2</span>
-          <span>+</span>
+          <span (click)="downgradeQuantity()" style="cursor: pointer">-</span>
+          <span class="number">{{ quantity }}</span>
+          <span (click)="upgradeQuantity()" style="cursor: pointer">+</span>
         </div>
 
-        <p class="remove">Remove</p>
+        <p class="remove" (click)="removeQuantity()">Remove</p>
       </div>
     </div>
   </div>
