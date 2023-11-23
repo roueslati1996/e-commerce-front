@@ -1,3 +1,5 @@
+@use "../../../assets/styles/index" as *;
+
 .header {
   display: flex;
   align-items: center;
@@ -19,6 +21,10 @@
       gap: 4.1rem;
       list-style: none;
 
+      @include mq(851, max) {
+        display: none;
+      }
+
       li {
         color: var(--Space-Cadet, #17183b);
         line-height: 1.6rem;
@@ -35,5 +41,27 @@
     border-left: 1px solid #d1d1d8;
     height: 100%;
     padding-left: 4rem;
+    position: relative;
+
+    &::before {
+      content: "0";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #6a983c;
+      position: absolute;
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      top: 1.5rem;
+      left: 2.5rem;
+      color: #fff;
+      font-size: 1.4rem;
+    }
+
+    .cart_icon {
+      width: 2.5rem;
+      height: auto;
+    }
   }
 }

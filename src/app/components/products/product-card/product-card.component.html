@@ -1,0 +1,20 @@
+<div class="product_card_container">
+  <a href="/products/details"> <img src="../../../assets/images/product.jpg" /></a>
+
+  <p class="reduction">{{ reduction }} %</p>
+
+  <div class="typo">
+    <a href="/products/details"> <p class="product_title">Product title</p></a>
+    <p class="product_description">Space for a small product description</p>
+  </div>
+
+  <div class="product_card_bottom">
+    <div class="price_container">
+      <p class="price">{{ price }} USD</p>
+
+      <p class="old_price">{{ oldPrice }}</p>
+    </div>
+
+    <button class="product_card_btn" (click)="addToCartHandler()">Add</button>
+  </div>
+</div>

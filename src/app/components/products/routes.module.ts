@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../../guard/auth.guard';
-
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductComponent } from './view-product-details/product.component';
 import { ViewProductsComponent } from './view-products/view-products.component';
 
 const routes: Routes = [
@@ -12,15 +13,16 @@ const routes: Routes = [
   },
   {
     path: 'details',
-    component: ViewProductsComponent,
+    component: ProductComponent,
     canActivate: [AuthGuard],
   },
+
   { path: '', redirectTo: 'products', pathMatch: 'full' },
 ];
 
 @NgModule({
-  declarations: [ViewProductsComponent],
+  declarations: [ViewProductsComponent,ProductCardComponent],
   imports: [RouterModule.forChild(routes)],
-  exports: [ViewProductsComponent],
+  exports: [ProductCardComponent],
 })
 export class Module {}
