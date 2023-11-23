@@ -21,8 +21,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ViewProductsComponent,ProductCardComponent],
+  declarations: [ProductComponent, ViewProductsComponent, ProductCardComponent],
   imports: [RouterModule.forChild(routes)],
-  exports: [ProductCardComponent],
+  exports: [ProductComponent, ViewProductsComponent, ProductCardComponent],
 })
 export class Module {}

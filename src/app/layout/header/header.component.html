@@ -3,11 +3,9 @@
     <img src="../../../assets/images/logo.png" class="logo" />
 
     <ul class="nav_list">
-      <li><a href="/products">SHOP</a></li>
-      <li><a href="/collective">COLLECTIVE</a></li>
-      <li><a href="/designers">DESIGNERS</a></li>
-      <li><a href="/about-us">ABOUT US</a></li>
-      <li><a href="/contact-us">CONTACT US</a></li>
+      <li *ngFor="let page of pageslist">
+        <a href="/products">{{ page }}</a>
+      </li>
     </ul>
 
     <img src="../../../assets/icons/menu.svg" />
