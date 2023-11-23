@@ -1,29 +1,21 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-login',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
-  name!: string;
-  email!: string;
-  password!: string;
-  confirmPassword!: string;
+  email: string = '';
+  password: string = '';
 
-  constructor() {
-    // Initialize your properties if needed
-  }
-
-  register(): void {
-    // Your registration logic here
-    console.log(
-      'Registering:',
-      this.name,
-      this.email,
-      this.password,
-      this.confirmPassword
-    );
-    // You probably want to add actual logic to handle registration
+  login() {
+    // Implement your login logic here
+    if (this.email === 'user@example.com' && this.password === 'password') {
+      // Successful login, navigate to the dashboard or home page
+      // You can use Angular Router for navigation
+    } else {
+      // Handle login failure (e.g., show an error message)
+    }
   }
 }

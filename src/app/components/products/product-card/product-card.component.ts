@@ -14,3 +14,4 @@ export class ProductCardComponent {
     console.log('product added!');
   }
 }
+
