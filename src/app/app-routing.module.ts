@@ -12,15 +12,13 @@ const routes: Routes = [
   },
 
   {
-    path: 'products',
-    loadChildren: () =>
-      import('./components/products/routes.module').then((m) => m.Module),
+    path: 'admin',
+    loadChildren: () => import('./admin/routes.module').then((m) => m.Module),
   },
 
   {
-    path: 'cart',
-    loadChildren: () =>
-      import('./components/cart/routes.module').then((m) => m.Module),
+    path: 'user',
+    loadChildren: () => import('./user/routes.module').then((m) => m.Module),
   },
 
   { path: '**', component: NotFoundComponent },

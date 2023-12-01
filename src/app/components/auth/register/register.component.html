@@ -1,28 +1,64 @@
 <div class="register-container">
-  <div class="register-card">
+  <form class="register-card" (ngSubmit)="registerHandler()">
     <h2 class="register-card-title">Sign up</h2>
     <p class="register-card-subtitle">Sign up using your informations.</p>
 
     <div class="register-card-input-container">
       <i class="fa-solid fa-user register-card-input-icon"></i>
-      <input type="text" placeholder="Enter your fullname" class="register-card-input">
+      <input
+        type="text"
+        placeholder="Enter your firstName"
+        class="register-card-input"
+        [(ngModel)]="firstName"
+        name="firstName"
+      />
+    </div>
+
+    <div class="register-card-input-container">
+      <i class="fa-solid fa-user register-card-input-icon"></i>
+      <input
+        type="text"
+        placeholder="Enter your lastName"
+        class="register-card-input"
+        [(ngModel)]="lastName"
+        name="lastName"
+      />
     </div>
 
     <div class="register-card-input-container">
       <i class="fa-solid fa-envelope register-card-input-icon"></i>
-      <input type="text" placeholder="Enter your email" class="register-card-input">
+      <input
+        type="text"
+        placeholder="Enter your email"
+        class="register-card-input"
+        [(ngModel)]="email"
+        name="email"
+      />
     </div>
 
     <div class="register-card-input-container">
       <i class="fa-solid fa-lock register-card-input-icon"></i>
-      <input type="password" placeholder="Enter your password" class="register-card-input">
+      <input
+        type="password"
+        placeholder="Enter your password"
+        class="register-card-input"
+        [(ngModel)]="password"
+        name="password"
+      />
     </div>
 
-    <button type="button" class="register-card-btn">Sign up</button>
+    <button type="button" class="register-card-btn" (click)="registerHandler()">
+      Sign up
+    </button>
 
-    <div  class="register-card-account">You have an account? <span routerLink="/auth/login" class="register-card-account-signup">Sign in</span></div>
+    <div class="register-card-account">
+      You have an account?
+      <span routerLink="/auth/login" class="register-card-account-signup"
+        >Sign in</span
+      >
+    </div>
 
-    <hr class="register-card-devider">
+    <hr class="register-card-devider" />
 
     <h4 class="register-card-or">Or sign up with</h4>
 
@@ -40,8 +76,16 @@
         <i class="fa-brands fa-google"></i>
       </div>
     </div>
-  </div>
+  </form>
 
-  <img src="/assets/images/Rectangle 57.png" alt="shape" class="register-container-shape-1">
-  <img src="/assets/images/Rectangle 58.png" alt="shape" class="register-container-shape-2">
+  <img
+    src="/assets/images/Rectangle 57.png"
+    alt="shape"
+    class="register-container-shape-1"
+  />
+  <img
+    src="/assets/images/Rectangle 58.png"
+    alt="shape"
+    class="register-container-shape-2"
+  />
 </div>

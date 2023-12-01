@@ -1,0 +1,25 @@
+<section class="products_page">
+    <h2 class="page_title">Products</h2>
+  
+    <table>
+      <thead>
+        <td>Product ID</td>
+        <td>Date</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+      </thead>
+  
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.date }}</td>
+        <td>{{ product.name }}</td>
+        <td>$ {{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td class="icon_options">
+          <img src="../../../../assets/icons/dots.svg" />
+        </td>
+      </tr>
+    </table>
+  </section>
+  

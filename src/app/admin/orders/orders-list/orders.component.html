@@ -1,0 +1,24 @@
+<section class="orders_page">
+  <h2 class="page_title">Orders</h2>
+
+  <table>
+    <thead>
+      <td>Product ID</td>
+      <td>Date</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td>Quantity</td>
+    </thead>
+
+    <tr>
+      <td>{{ order.id }}</td>
+      <td>{{ order.date }}</td>
+      <td>{{ order.name }}</td>
+      <td>$ {{ order.price }}</td>
+      <td>{{ order.quantity }}</td>
+      <td class="icon_options">
+        <img src="../../../../assets/icons/dots.svg" />
+      </td>
+    </tr>
+  </table>
+</section>

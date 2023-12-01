@@ -1,0 +1,36 @@
+.sideBar {
+  width: 27rem;
+  height: 100vh;
+  border-right: 1px solid #bdbecf;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+
+  .logo {
+    width: 10rem;
+    height: auto;
+    align-self: center;
+    margin-bottom: 4rem;
+  }
+
+  .nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nav_item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .active {
+    color: white;
+    border-radius: 8px;
+    background: var(--green, #6a983c);
+  }
+}

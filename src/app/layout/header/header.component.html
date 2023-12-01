@@ -1,17 +1,32 @@
 <header class="header">
   <div class="header_left">
-    <img src="../../../assets/images/logo.png" class="logo" />
+    <img
+      src="../../../assets/images/logo.png"
+      class="logo"
+      *ngIf="!isAdminView"
+    />
 
-    <ul class="nav_list">
+    <ul class="nav_list" *ngIf="!isAdminView">
       <li *ngFor="let page of pageslist">
-        <a href="/products">{{ page }}</a>
+        <a href="/user/products">{{ page }}</a>
       </li>
     </ul>
 
-    <img src="../../../assets/icons/menu.svg" />
+    <img src="../../../assets/icons/menu.svg" *ngIf="!isAdminView" />
   </div>
 
-  <div class="header_right">
-    <a href="/cart"> <img src="../../../assets/icons/cart_icon.svg" /></a>
+  <div class="header_right" *ngIf="!isAdminView">
+    <a href="/user/cart"> <img src="../../../assets/icons/cart_icon.svg" /></a>
+  </div>
+
+  <div class="current_user" *ngIf="isAdminView">
+    <img src="../../../assets/images/user.svg" />
+
+    <div class="user_info">
+      <p class="name">Monjiya</p>
+      <p class="role">Admin</p>
+    </div>
+
+    <img class="icon_down" src="../../../assets/icons/chevron-down.svg" />
   </div>
 </header>
