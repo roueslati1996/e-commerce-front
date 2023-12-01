@@ -1,0 +1,47 @@
+.orders_page {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: calc(100vw - 30rem);
+
+  .page_title {
+    color: #495057;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  table {
+    border-radius: 15px;
+    border: 1px solid #d7d7e1;
+    background: #fff;
+    width: 100%;
+
+    thead {
+      color: var(--2, #635d5d);
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      td {
+        padding: 2rem 1rem;
+      }
+    }
+
+    tr {
+      td {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+
+      .icon_options {
+        cursor: pointer;
+        text-align: end;
+        padding-right: 2rem;
+      }
+    }
+  }
+}
