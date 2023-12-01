@@ -64,4 +64,28 @@
       height: auto;
     }
   }
+
+  .current_user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: white;
+
+    .user_info {
+      color: #555b6d;
+
+      .name {
+        font-size: 1.3rem;
+      }
+
+      .role {
+        font-size: 1rem;
+      }
+    }
+
+    .icon_down {
+      width: 2.5rem;
+    }
+  }
 }

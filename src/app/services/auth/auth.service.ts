@@ -11,27 +11,39 @@ import { User } from '../../models/user.model';
 export class AuthService {
   constructor(private client: HttpClient) {}
 
+  base_url = 'http://localhost:6001/v1';
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
     }),
   };
 
-  public login(username: string, password: string): Observable<void> {
+  public login(email: string, password: string): Observable<void> {
     return this.client.post<void>(
-      'https://localhost:7239/api/Auth/Login',
+      `${this.base_url}/auth/login`,
       {
-        username: username,
+        email: email,
         password: password,
       },
       this.httpOptions
     );
   }
 
-  public register(item: User): Observable<void> {
+  public register(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ): Observable<void> {
     return this.client.post<void>(
-      'https://localhost:7239/api/Auth/Register',
-      item,
+      `${this.base_url}/auth/register`,
+      {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password,
+      },
       this.httpOptions
     );
   }

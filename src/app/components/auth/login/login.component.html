@@ -1,32 +1,61 @@
 <div class="login-container">
-  <div class="login-card">
+  <form class="login-card" (ngSubmit)="loginHandler()">
     <h2 class="login-card-title">Sign in</h2>
-    <p class="login-card-subtitle">Sign in to your account using email and password provided during registration.</p>
+    <p class="login-card-subtitle">
+      Sign in to your account using email and password provided during
+      registration.
+    </p>
 
     <div class="login-card-input-container">
       <i class="fa-solid fa-envelope login-card-input-icon"></i>
-      <input type="text" placeholder="Enter your email" class="login-card-input">
+      <input
+        type="text"
+        placeholder="Enter your email"
+        class="login-card-input"
+        [(ngModel)]="email"
+        name="email"
+      />
     </div>
 
     <div class="login-card-input-container">
       <i class="fa-solid fa-lock login-card-input-icon"></i>
-      <input type="password" placeholder="Enter your password" class="login-card-input">
+      <input
+        type="password"
+        placeholder="Enter your password"
+        class="login-card-input"
+        [(ngModel)]="password"
+        name="password"
+      />
     </div>
 
     <div class="login-card-forgot-password-container">
       <div class="login-card-forgot-password-checkbox">
-        <input type="checkbox" id="keep-me" class="login-card-forgot-password-checkbox-input" />
+        <input
+          type="checkbox"
+          id="keep-me"
+          class="login-card-forgot-password-checkbox-input"
+        />
         <label for="keep-me">Keep me</label>
       </div>
 
-      <p class="login-card-forgot-password-p" routerLink="/auth/forgot-password">Forgot password?</p>
+      <p
+        class="login-card-forgot-password-p"
+        routerLink="/auth/forgot-password"
+      >
+        Forgot password?
+      </p>
     </div>
 
-    <button type="button" class="login-card-btn">Sign in</button>
+    <button type="submit" class="login-card-btn">Sign in</button>
 
-    <div  class="login-card-account">Don't have an account? <span routerLink="/auth/register" class="login-card-account-signup">Sign up</span></div>
+    <div class="login-card-account">
+      Don't have an account?
+      <span routerLink="/auth/register" class="login-card-account-signup"
+        >Sign up</span
+      >
+    </div>
 
-    <hr class="login-card-devider">
+    <hr class="login-card-devider" />
 
     <h4 class="login-card-or">Or sign up with</h4>
 
@@ -44,8 +73,16 @@
         <i class="fa-brands fa-google"></i>
       </div>
     </div>
-  </div>
+  </form>
 
-  <img src="/assets/images/Rectangle 57.png" alt="shape" class="login-container-shape-1">
-  <img src="/assets/images/Rectangle 58.png" alt="shape" class="login-container-shape-2">
+  <img
+    src="/assets/images/Rectangle 57.png"
+    alt="shape"
+    class="login-container-shape-1"
+  />
+  <img
+    src="/assets/images/Rectangle 58.png"
+    alt="shape"
+    class="login-container-shape-2"
+  />
 </div>
