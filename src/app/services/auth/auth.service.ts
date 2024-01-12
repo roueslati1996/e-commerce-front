@@ -41,8 +41,10 @@ export class AuthService {
       {
         firstName: firstName,
         lastName: lastName,
+        username: firstName + ' ' + lastName,
         email: email,
         password: password,
+        verifyPassword: password,
       },
       this.httpOptions
     );

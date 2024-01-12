@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'e-commerce';
 
-  isAdminView = true;
+  isAdminView = false;
 
-  isUserView = false;
+  isUserView = true;
 }

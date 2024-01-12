@@ -11,15 +11,15 @@ const routes: Routes = [
       import('./components/auth/routes.module').then((m) => m.Module),
   },
 
-  {
-    path: 'admin',
-    loadChildren: () => import('./admin/routes.module').then((m) => m.Module),
-  },
+  // {
+  //   path: 'admin',
+  //   loadChildren: () => import('./admin/routes.module').then((m) => m.Module),
+  // },
 
-  {
-    path: 'user',
-    loadChildren: () => import('./user/routes.module').then((m) => m.Module),
-  },
+  // {
+  //   path: 'user',
+  //   loadChildren: () => import('./user/routes.module').then((m) => m.Module),
+  // },
 
   { path: '**', component: NotFoundComponent },
 ];
