@@ -18,18 +18,13 @@ export class LoginComponent {
       this.auth.login(this.email, this.password).subscribe({
         next: (data: any) => {
           localStorage.setItem('token', data.data.accessToken);
+          this.router.navigate(['products']);
         },
         error: (err) => {
           console.log(err);
         },
       });
-
-      this.router.navigate(['products']);
-
-      // Successful login, navigate to the dashboard or home page
-      // You can use Angular Router for navigation
     } else {
-      // Handle login failure (e.g., show an error message)
       alert('fail');
     }
   }

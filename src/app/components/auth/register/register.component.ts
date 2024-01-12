@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,28 +13,21 @@ export class RegisterComponent {
   email: string = '';
   password: string = '';
 
-  constructor(public auth: AuthService) {}
+  constructor(public auth: AuthService, public router: Router) {}
 
   registerHandler() {
-    console.log(
-      'clicked',
-      this.firstName + this.lastName + this.email + this.password
-    );
     if (this.firstName && this.lastName && this.email && this.password) {
       this.auth
         .register(this.firstName, this.lastName, this.email, this.password)
         .subscribe({
           next: (data) => {
-            console.log(data);
+            this.router.navigate(['/auth/login']);
           },
           error: (err) => {
-            console.log(err);
+            alert(JSON.stringify(err.error.errors));
           },
         });
-      // Successful register, navigate to the dashboard or home page
-      // You can use Angular Router for navigation
     } else {
-      // Handle register failure (e.g., show an error message)
       alert('fail');
     }
   }
